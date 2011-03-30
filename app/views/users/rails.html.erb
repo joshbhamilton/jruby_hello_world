@@ -1,0 +1,23 @@
+<header>
+  <div id="summary_title">
+    <h1>Known Rails</h1>
+  </div>
+</header>
+<section>
+  <article>
+    <h1>UNIQUE URLS - CUSTOMERS: (<%= @rails_customers_urls.length %>)</h1>
+    <ul>
+      <% for urls in @rails_customers_urls %>
+      <li><%= link_to urls, urls %></li>
+      <% end %>
+    </ul>
+  </article>
+  <article>
+    <h1>UNIQUE URLS - NONCUSTOMERS (<%= @rails_non_urls.length %>)</h1>
+    <ul>
+      <% for urls in @rails_non_urls %>
+      <li><%= link_to urls, urls %></li>
+      <% end %>
+    </ul>
+  </article>
+</section>

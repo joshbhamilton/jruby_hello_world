@@ -1,0 +1,37 @@
+<header>
+  <div id="summary_title">
+    <h1>Summary for <%= @user.screen_name %></h1>
+  </div>
+</header>
+<section>
+  <article>
+    <p id="notice"><%= notice %></p>
+
+    <p>User ID:          <%= @user.id %></p>
+    <p>Twitter ID:       <%= @user.tweet_id %></p>
+    <p>Twitter Handle:   <a href= <%="http://twitter.com/#!/#{@user.screen_name}" %> >Twitter for <%= @user.screen_name %></a></p>
+    <p>Location:         <%= @user.location %></p>
+    <p>URL:              <a href= <%= "#{@user.url}" %>><%= @user.url %></a></p>
+    <p>BuiltWith:        <a href= <%= "http://builtwith.com/#{@user.url.gsub("http://","")}" %>>BuiltWith</a></p>
+    <p>Followers Count:  <%= @user.followers_count %></p>
+    <p>Following Count:  <%= @user.friends_count %></p>
+    <p>Time Zone:        <%= @user.time_zone %></p>
+    <p>Rails?            
+      <% if @user.rails.nil?  then %>
+        <%= "Not Sure if Rails"%>
+      <% else %>
+        <%= @user.rails %>
+      <% end %></p>
+    <p>Customer?            
+      <% if @user.customer.nil?  then %>
+        <%= "Not Sure if Rails"%>
+      <% else %>
+        <%= @user.customer %>
+      <% end %></p>                  
+
+    <p>NOTE: DEFAULT for Rails? and Customer? is false.  Still need to be updated.</p>
+
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Back', users_path %>
+  </article>
+</section>

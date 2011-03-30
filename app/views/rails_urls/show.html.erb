@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<section>
+  <article>
+<p>
+  <b>Url:</b>
+  <%= @rails_url.url %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @rails_url.customer %>
+</p>
+
+<p>
+  <b>Lead:</b>
+  <%= @rails_url.lead %>
+</p>
+</article>
+</section>
+
+<%= link_to 'Edit', edit_rails_url_path(@rails_url) %> |
+<%= link_to 'Back', rails_urls_path %>

@@ -1,0 +1,2 @@
+module RailsUrlsHelper
+end

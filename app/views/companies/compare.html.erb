@@ -1,0 +1,50 @@
+<header>
+  <div id="compare_title">
+    <h1><%= @company_a.screen_name %> (<%= @company_a_followers.length %>)    
+      vs.   
+      <%= @company_b.screen_name %> (<%= @company_b_followers.length %>)</h1>
+  </div>
+</header>
+<section>
+  <article>
+    <h4>Users who follow <%= @company_a.screen_name %> but not <%= @company_b.screen_name %> (<%= @company_a_not_b.length %>)</h4>
+    <!-->Add Links that take you to the various parts of the page<!-->
+    <a name="hide">Hide</a>
+    <a name="show">Show</a>
+    <table>
+      <% for follower in @company_a_not_b %>
+      <tr>
+        <td><%= link_to follower.screen_name, user_path(follower) %></td>
+        <!--><td><a href= <%="/show_user/#{follower.screen_name}" %>><%= follower.screen_name %></a></td><!-->
+        <td><a href= <%="http://twitter.com/#!/#{follower.screen_name}" %> >Twitter for <%= follower.screen_name %></a></td>
+        <td>(<%= follower.followers_count %>)</td>
+      </tr>
+      <% end %>
+    </table>
+  </article>
+  <article>
+    <h4>Users who follow <%= @company_b.screen_name %> but not <%= @company_a.screen_name %> (<%= @company_b_not_a.length %>)</h4>
+    <a href="javascript:switchid('f1');">Display</a>    
+    <table>
+      <% for follower in @company_b_not_a %>
+      <tr>
+        <td><td><%= link_to follower.screen_name, user_path(follower) %></td>
+        <td><a href= <%="http://twitter.com/#!/#{follower.screen_name}" %> >Twitter for <%= follower.screen_name %></a></td>
+        <td>(<%= follower.followers_count %>)</td>
+      </tr>
+      <% end %>
+    </table>
+  </article>
+  <article>
+    <h4>Users who follow both (<%= @both.length %>)</h4>
+    <table>
+      <% for follower in @both %>
+      <tr>
+        <td><td><%= link_to follower.screen_name, user_path(follower) %></td></td>
+        <td><a href= <%="http://twitter.com/#!/#{follower.screen_name}" %> >Twitter for <%= follower.screen_name %></a></td>
+        <td>(<%= follower.followers_count %>)</td>
+      </tr>
+      <% end %>
+    </table>
+  </article>
+</section>

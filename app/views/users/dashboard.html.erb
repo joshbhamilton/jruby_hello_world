@@ -1,0 +1,19 @@
+<header>
+  <div id="summary_title">
+    <h1>Dashboard</h1>
+  </div>
+</header>
+<section>
+  <article>
+    <h1>Total Number of Unique Users:  </h1>
+    <h2><%= @users.length %> (<%= number_to_percentage(ey_unique_users_percentage) %> are EY Followers)</h2>
+    <br/>
+
+    <h1>Total Number of Rails Users:  </h1>
+    <h2><%= @rails_users.length %> (<%= number_to_percentage(ey_rails_percentage ) %> are EY Followers)</h2>
+    <br/>
+
+    <h1>Total Number of Customers:  </h1>
+    <h2><%= @customers.length %> ( <%= number_to_percentage(customers_percentage ) %> of Total Users, <%= number_to_percentage(customers_rails_percentage) %> of Total Rails Users)</h2>
+  </article>
+</section>

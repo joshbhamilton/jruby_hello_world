@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tweet_id: 1
+  screen_name: MyString
+  location: MyString
+  url: MyString
+  followers_count: 1
+  friends_count: 1
+  time_zone: MyString
+  rails: false
+  customer: false
+
+two:
+  tweet_id: 1
+  screen_name: MyString
+  location: MyString
+  url: MyString
+  followers_count: 1
+  friends_count: 1
+  time_zone: MyString
+  rails: false
+  customer: false

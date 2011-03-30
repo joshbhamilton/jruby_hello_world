@@ -1,0 +1,30 @@
+<%= form_for(@rails_url) do |f| %>
+  <% if @rails_url.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rails_url.errors.count, "error") %> prohibited this rails_url from being saved:</h2>
+
+      <ul>
+      <% @rails_url.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br />
+    <%= f.check_box :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :lead %><br />
+    <%= f.check_box :lead %>
+  </div>
+  <br />
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

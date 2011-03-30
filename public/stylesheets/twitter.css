@@ -1,0 +1,64 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+html {background:url('/images/main_background.jpg') -20% -23px repeat-x}
+body {line-height:1;}
+
+header {
+	display:block;}
+header {
+	height:100px; 
+	width:955px; 
+	margin:0 auto; 
+	position:relative; 
+	margin-bottom:10px; 
+	padding-top:52px; 
+	padding-left:5px;}
+header h1 {color:white; text-shadow:0 -1px 0 black; font: 2em "Museo Slab", "Helvetica", "Arial", sans-serif;}
+
+article {display:block;}
+section article {
+  background:url('/images/page_background.png') top left no-repeat; 
+/*  width:670px;    min-height:300px; */
+  padding:26px; 
+  margin-left:238px;}
+
+footer {
+	background:url('/images/footer_bg.gif') -15% top repeat-x; 
+    color:white; 
+    text-shadow:0 -1px 0 black; 
+    -webkit-text-stroke:1px transparent;
+	float: bottom;
+    padding-top:35px;
+	padding-bottom: 35px;}
+
+footer p a:link, footer p a:hover, footer p a:visited, footer p a:active {background:none; border-bottom:2px solid #3A3A3A; color:white;}
+footer p a:hover {background:none; border-bottom:2px solid #6D6D6D; color:white;}
+
+footer div#footer_contents { 
+  margin:0 auto; 
+  padding:20px 0; 
+  height:190px;}
+
+header div#summary_title {
+	font-size: 2em;
+	text-align: center;
+}
+header div#compare_title {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+table {
+	margin-bottom:1.4em; 
+	clear:left;}
+th {
+	border-bottom:2px solid #333; 
+	font-weight:bold; 
+	text-align:left;}
+td {
+	border-bottom:1px solid #E1E1E1; 
+	font-size:12px;}
+th, td {
+	padding:4px 4px 4px 0;}
+tr:last-child td {
+	border-bottom-width:0;}

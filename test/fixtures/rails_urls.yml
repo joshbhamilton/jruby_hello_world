@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  customer: false
+  lead: false
+
+two:
+  url: MyString
+  customer: false
+  lead: false

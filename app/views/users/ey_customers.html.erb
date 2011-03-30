@@ -1,0 +1,27 @@
+<header>
+  <div id="summary_title">
+    <h1>Known Engine Yard Customers</h1>
+  </div>
+</header>
+<section>
+  <article>
+    <table>
+      <tr>
+        <td>Screen Name</td>
+        <td>Twitter</td>
+        <td>Followers Count </td>
+        <td>Rails?</td>
+        <td>Customer?</td>
+      </tr>
+      <% for customers in @customers %>
+      <tr>
+        <td><%= link_to customers.screen_name, customers %></td>
+        <td><a href= <%="http://twitter.com/#!/#{customers.screen_name}" %> >Twitter for <%= customers.screen_name %></a></td>
+        <td>(<%= customers.followers_count %>)</td>
+        <td><%= customers.rails %></td>
+        <td><%= customers.customer %></td>
+      </tr>
+      <% end %>
+    </table>
+  </article>
+</section>

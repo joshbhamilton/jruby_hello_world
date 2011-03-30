@@ -1,0 +1,51 @@
+<header>
+  <div id="summary_title">
+    <h1>Summary for <%= @company.screen_name %> (<%= @company_followers.length %>)</h1>
+  </div>
+</header>
+<section>
+  <article>
+    <h4>Summary</h4>
+    <p>Total Followers:  <%= @company_followers.length %></p>
+    <p>Number of Rails Users:  <%= @company_rails.length %></p>
+    <p>Number of Customers:  <%= @company_customers.length %></p>
+  </article>
+  <article>
+    <h4>Compare against another company</h4>
+    <table>
+    <% for company in @not_company %>
+      <tr>
+        <td><%= link_to company.screen_name, compare_path(@company,company) %></td>
+      </tr>
+      <% end %>
+    </table>
+  </article>
+
+  <article>
+<h4>Followers</h4>
+<div id="hideShow">
+<table>
+    <tr>
+      <th>Screen Name</th>
+      <th>Twitter</th>
+      <th>Followers Count </th>
+      <th>Rails?</th>
+      <th>Customer?</th>
+    </tr>
+  <% for follower in @company_followers %>
+    <tr>
+      <td><%= link_to follower.screen_name, follower %></td>
+      <td><a href= <%="http://twitter.com/#!/#{follower.screen_name}" %> >Twitter for <%= follower.screen_name %></a></td>
+      <td>(<%= follower.followers_count %>)</td>
+      <td><%= follower.rails %></td>
+      <td><%= follower.customer %></td>
+    </tr>
+  <% end %>
+</table>
+</div>
+  </article>
+</section>
+
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

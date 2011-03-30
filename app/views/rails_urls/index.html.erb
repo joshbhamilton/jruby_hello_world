@@ -1,0 +1,66 @@
+<header>
+  <h1>Listing rails_urls</h1>
+</header>
+
+<section>
+  <article>
+    <h1>Rails URLs - Not Customer, Not Lead</h1>
+    <table>
+      <tr>
+        <th>Url</th>
+        <th>Customer</th>
+        <th>Lead</th>
+      </tr>
+
+    <% @rails_no_leads.each do |rails_url| %>
+      <tr>
+        <td><%= link_to rails_url.url, "http://#{rails_url.url}" %></td>
+        <td><%= rails_url.customer %></td>
+        <td><%= rails_url.lead %></td>
+        <td><%= link_to 'Edit', edit_rails_url_path(rails_url) %></td>
+        <td><%= link_to 'Destroy', rails_url, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+    </table>
+  </article>
+  <article>
+    <h1>Rails URLs - Not Customer, Lead Created</h1>
+    <table>
+      <tr>
+        <th>Url</th>
+        <th>Customer</th>
+        <th>Lead</th>
+      </tr>
+
+    <% @rails_leads.each do |rails_url| %>
+      <tr>
+        <td><%= link_to rails_url.url, "http://#{rails_url.url}" %></td>
+        <td><%= rails_url.customer %></td>
+        <td><%= rails_url.lead %></td>
+        <td><%= link_to 'Edit', edit_rails_url_path(rails_url) %></td>
+        <td><%= link_to 'Destroy', rails_url, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+    </table>
+  </article>
+  <article>
+    <h1>Rails URLs - Customers</h1>    
+    <table>
+      <tr>
+        <th>Url</th>
+        <th>Customer</th>
+        <th>Lead</th>
+      </tr>
+
+    <% @rails_customers.each do |rails_url| %>
+      <tr>
+        <td><%= link_to rails_url.url, "http://#{rails_url.url}" %></td>
+        <td><%= rails_url.customer %></td>
+        <td><%= rails_url.lead %></td>
+        <td><%= link_to 'Edit', edit_rails_url_path(rails_url) %></td>
+        <td><%= link_to 'Destroy', rails_url, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+    </table>
+  </article>
+</section>
